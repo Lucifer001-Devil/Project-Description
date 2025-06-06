@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Showcase</title>
+  <style>
+    /* Animated Gradient Background */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(-45deg, #e3f2fd, #e8f5e9, #fff8e1, #fce4ec);
+      background-size: 600% 600%;
+      animation: animatedBG 15s ease infinite;
+    }
+
+    @keyframes animatedBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .section-container {
+      max-width: 950px;
+      margin: auto;
+      background: #ffffffcc;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(4px);
+    }
+
+    .section-header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #0d47a1, #42a5f5);
+      padding: 14px;
+      margin-top: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-header:hover {
+      background: linear-gradient(90deg, #1565c0, #64b5f6);
+      transform: scale(1.01);
+    }
+
+    .project-list {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .project-header {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-header:hover {
+      background: linear-gradient(90deg, #388e3c, #81c784);
+      transform: scale(1.01);
+    }
+
+    .project-details {
+      display: none;
+      margin-top: 10px;
+      padding: 18px;
+      background: #fefefe;
+      border-left: 5px solid #4caf50;
+      font-size: 16px;
+      line-height: 1.7;
+      border-radius: 6px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .role-title {
+      font-weight: bold;
+      color: #2e7d32;
+      margin-top: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section-container">
+    
+    <!-- Capstone Projects -->
+    <div class="section-header" onclick="toggleDetails('capstoneSection')">
+      Capstone Projects
+    </div>
+    <div class="project-list" id="capstoneSection">
+      
+      <div class="project-header" onclick="toggleDetails('agroProject')">
+        AgroGenius Harvest
+      </div>
+      <div class="project-details" id="agroProject">
+        <div class="role-title">Role:</div>
+        Team Leader — Handled the entire project lifecycle, including SRS documentation and full website development.
+
+        <div class="role-title">Overview:</div>
+        AgroGenius Harvest is a web platform allowing farmers to purchase farming tools and fertilizers at low cost directly from manufacturers. The idea was to involve local shopkeepers and government schemes for enhanced accessibility.
+
+        <div class="role-title">Features:</div>
+        <ul>
+          <li>Buy tools/fertilizers at discounted prices</li>
+          <li>Local delivery and shopkeeper support</li>
+          <li>Manufacturer-to-customer direct model</li>
+          <li>Fully responsive frontend</li>
+        </ul>
+
+        <div class="role-title">Tech Stack:</div>
+        HTML, CSS, JavaScript, Bootstrap, React.js, Node.js, MongoDB
+
+        <div class="role-title">Responsibilities:</div>
+        <ul>
+          <li>Led the project and documentation</li>
+          <li>Built UI/UX and e-commerce logic</li>
+          <li>Managed GitHub and teamwork</li>
+        </ul>
+      </div>
+
+      <div class="project-header" onclick="toggleDetails('rentProject')">
+        All Around Rent
+      </div>
+      <div class="project-details" id="rentProject">
+        <div class="role-title">Role:</div>
+        Co-Developer — Focused on UI, availability system, and backend validation.
+
+        <div class="role-title">Overview:</div>
+        This platform connects users with freelancers (like photographers, drivers, etc.) who can list their experience and pricing. Users can browse, check availability, and book them.
+
+        <div class="role-title">Features:</div>
+        <ul>
+          <li>Freelancer signup with license & pricing</li>
+          <li>User ratings and reviews</li>
+          <li>Availability checking & direct booking</li>
+          <li>Platform fees from freelancers</li>
+        </ul>
+
+        <div class="role-title">Tech Stack:</div>
+        React.js, HTML/CSS, Node.js, Express.js, MongoDB
+      </div>
+    </div>
+
+    <!-- Internship Projects -->
+    <div class="section-header" onclick="toggleDetails('internshipSection')">
+      Internship Projects
+    </div>
+    <div class="project-list" id="internshipSection">
+      
+      <div class="project-header" onclick="toggleDetails('internshipProject')">
+        Employee Management System
+      </div>
+      <div class="project-details" id="internshipProject">
+        <div class="role-title">Role:</div>
+        MERN Stack Developer Intern at Brainy Beam InfoTech Pvt. Ltd. (Jan 20 – May 20)
+
+        <div class="role-title">Overview:</div>
+        Developed a role-based employee management system with task allocation. The system supports three roles: Admin, Senior Employee, and Junior Employee.
+
+        <div class="role-title">Functional Roles:</div>
+        <ul>
+          <li><b>Admin:</b> Add/remove employees, assign tasks, manage payroll & attendance</li>
+          <li><b>Senior Employee:</b> View/complete tasks, assign tasks to junior employees</li>
+          <li><b>Junior Employee:</b> View tasks and mark as complete</li>
+        </ul>
+
+        <div class="role-title">Completed Module:</div>
+        Task Management
+
+        <div class="role-title">Tech Stack:</div>
+        React.js, Bootstrap, Node.js, Express, MongoDB
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails(id) {
+      const section = document.getElementById(id);
+      section.style.display = (section.style.display === "block") ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
